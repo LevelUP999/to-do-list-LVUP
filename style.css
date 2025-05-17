@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: 200ms;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body {
+    height: 100dvh;
+    background: url(./img/background.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background: #FFFFFFa3;
+    width: 55%;
+    height: 400px;
+    padding: 20px 3%;
+    border-radius: 20px;
+    box-shadow: 0 5px 3px 3px #1a1a1a30;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+}
+
+.inputs input {
+    width: 40%;
+    height: 50px;
+    padding: 5px 3%;
+    background: #a8ff9ea3;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.inputs button {
+    background: #a8ff9e;
+    font-weight: bold;
+    color: #1a1a1a;
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.inputs input:focus,
+.inputs button:hover {
+    background: transparent;
+    border: 2px solid #a8ff9e;
+    color: #a8ff9e;
+    cursor: pointer;
+}
+
+.inputs input:hover {
+    cursor: auto;
+}
+
+#list {
+    height: 80%;
+    overflow-y: auto;
+}
+
+#list::-webkit-scrollbar {
+    width: 3px;
+}
+
+#list::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid #ff0000;
+}
+
+.item-list {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    padding: 5px 3%;
+    border-radius: 10px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #1a1a1a10;
+    color: #ff0000;
+    font-weight: bold;
+    animation: up 1s;
+}
+
+.item-list img {
+    height: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .inputs button{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    main{
+        height: 80%;
+        width: 80%;
+    }
+
+    .inputs button{
+        width: 45%;
+    }
+    .inputs input{
+        width: 45%;
+    }
+}
